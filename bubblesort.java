@@ -15,10 +15,14 @@ class BubbleDemo {
         // Bubble sort implementation
         for (i = 0; i < n - 1; i++) {  // Outer loop runs for n-1 passes
             for (j = 0; j < n - 1 - i; j++) {  // Inner loop reduces after each pass
-               
+               if (a[j] > a[j + 1]) {   // Compare adjacent elements
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;    // Swap
                 }
             }
         }
+        
 
         // Printing the sorted array
         System.out.println("The sorted elements are:");
