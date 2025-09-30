@@ -1,0 +1,29 @@
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog();  // upcasting
+        animal1.sound();  // Dog's sound() will be called
+
+        Animal animal2 = new Cat();  // upcasting
+        animal2.sound();  // Cat's sound() will be called
+    }
+}
